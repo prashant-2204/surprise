@@ -6,8 +6,8 @@ export default function MusicPlayer() {
   const [tracks, setTracks] = useState([]);
   const [currentTrack, setCurrentTrack] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [isCollapsed, setIsCollapsed] = useState(true); // Collapsible state
-  const dragRef = useRef(null); // Ref for Draggable
+  const [isCollapsed, setIsCollapsed] = useState(true);
+  const dragRef = useRef(null);
 
   useEffect(() => {
     async function fetchData() {
@@ -40,39 +40,39 @@ export default function MusicPlayer() {
     setIsPlaying(false);
   };
 
-  const toggleCollapse = () => setIsCollapsed(!isCollapsed); // Toggle collapse
+  const toggleCollapse = () => setIsCollapsed(!isCollapsed);
 
   return (
     <Draggable nodeRef={dragRef}>
       <div
         ref={dragRef}
-        className={`fixed bottom-6 left-6 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-lg p-4 shadow-xl cursor-move text-xl text-semibold ${
+        className={`fixed bottom-6 left-6 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-lg p-6 shadow-xl cursor-move text-xl text-semibold md:w-80 lg:w-96 ${
           isCollapsed ? "w-40 h-28 flex items-center justify-center" : "w-72"
         }`}
       >
-        {/* Collapse Button */}
-        {isCollapsed?"Music Player":null}
+        {isCollapsed ? "Music Player" : null}
         <button
           onClick={toggleCollapse}
           className="absolute top-2 right-2 text-lg bg-white text-black rounded-full px-2"
         >
-        {isCollapsed ? "+" : "-"}
+          {isCollapsed ? "+" : "-"}
         </button>
 
-        {/* Collapsed State */}
-        {isCollapsed ? null : (
+        {!isCollapsed && (
           <div>
-            <h3 className="text-xl font-semibold mb-4 text-center">Music Player</h3>
+            <h3 className="text-xl font-semibold mb-4 text-center md:text-2xl sm:text-lg">
+              Music Player
+            </h3>
             <div className="space-y-4">
               {tracks.map((track, index) => (
-                <div key={index} className="flex items-center gap-4">
+                <div key={index} className="flex items-center gap-4 md:gap-6 sm:gap-2">
                   <img
                     src={track.img}
                     alt="Track Thumbnail"
-                    className="w-12 h-12 rounded-lg shadow-md"
+                    className="w-16 h-16 rounded-lg shadow-md md:w-20 md:h-20 sm:w-12 sm:h-12"
                   />
                   <button
-                    className="text-lg hover:text-yellow-200 transition-all duration-300"
+                    className="text-lg hover:text-yellow-200 transition-all duration-300 md:text-xl sm:text-sm"
                     onClick={() => playMusic(track)}
                   >
                     Play: {track.song.split("/").pop()}
@@ -84,7 +84,7 @@ export default function MusicPlayer() {
             {isPlaying && (
               <button
                 onClick={stopMusic}
-                className="mt-4 bg-red-500 text-white px-4 py-2 rounded-lg shadow hover:bg-red-600 transition"
+                className="mt-4 bg-red-500 text-white px-6 py-3 rounded-lg shadow hover:bg-red-600 transition md:px-4 md:py-2 md:text-lg sm:px-3 sm:py-1 sm:text-sm"
               >
                 Stop Music
               </button>
