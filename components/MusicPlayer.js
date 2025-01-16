@@ -6,7 +6,7 @@ export default function MusicPlayer() {
   const [tracks, setTracks] = useState([]);
   const [currentTrack, setCurrentTrack] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [isCollapsed, setIsCollapsed] = useState(false); // Collapsible state
+  const [isCollapsed, setIsCollapsed] = useState(true); // Collapsible state
   const dragRef = useRef(null); // Ref for Draggable
 
   useEffect(() => {
