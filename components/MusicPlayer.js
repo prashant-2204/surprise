@@ -47,7 +47,7 @@ export default function MusicPlayer() {
       <div
         ref={dragRef}
         className={`fixed bottom-6 left-6 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-lg p-6 shadow-xl cursor-move text-xl text-semibold md:w-80 lg:w-96 ${
-          isCollapsed ? "w-40 h-28 flex items-center justify-center" : "w-72"
+          isCollapsed ? "w-20 h-15 flex items-center justify-center" : "w-72"
         }`}
       >
         {isCollapsed ? "Music Player" : null}
@@ -66,13 +66,9 @@ export default function MusicPlayer() {
             <div className="space-y-4">
               {tracks.map((track, index) => (
                 <div key={index} className="flex items-center gap-4 md:gap-6 sm:gap-2">
-                  <img
-                    src={track.img}
-                    alt="Track Thumbnail"
-                    className="w-16 h-16 rounded-lg shadow-md md:w-20 md:h-20 sm:w-12 sm:h-12"
-                  />
+                  
                   <button
-                    className="text-lg hover:text-yellow-200 transition-all duration-300 md:text-xl sm:text-sm"
+                    className="text-lg hover:text-yellow-200 transition-all duration-300 md:text-lg sm:text-sm"
                     onClick={() => playMusic(track)}
                   >
                     Play: {track.song.split("/").pop()}
