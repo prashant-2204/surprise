@@ -12,7 +12,7 @@ export default function Home() {
       <section
         className="relative flex items-center justify-center h-screen bg-cover bg-center text-center overflow-hidden"
         style={{
-          backgroundImage: "url('/uploads/images/bg.jpg')", // Replace with your custom image path
+          backgroundImage: "url('/static/bg.jpg')", // Replace with your custom image path
         }}
       >
         {/* Overlay with low opacity */}
