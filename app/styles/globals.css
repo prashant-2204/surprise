@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add custom animations */
+@keyframes fallingHearts {
+  0% { transform: translateY(-10px); }
+  100% { transform: translateY(100vh); }
+}
+
+.heart-animation {
+  position: fixed;
+  top: -10px;
+  animation: fallingHearts 10s linear infinite;
+}
+
+/* Bounce In Animation */
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate__bounceIn {
+  animation: bounceIn 1s ease-in-out;
+}
+
+/* Heart Bounce Animation */
+@keyframes heartBounce {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.2) rotate(15deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.animate__heartBounce {
+  animation: heartBounce 2s ease-in-out infinite;
+}
+
+/* Heartbeat Animation */
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Floating Hearts with Heartbeat Effect */
+.animate-heartbeat {
+  animation: heartbeat 1.5s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* Smooth Fade-In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate__fadeIn {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Button Hover Effects */
+button:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+/* Floating Music Player */
+.music-player {
+  position: fixed;
+  bottom: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.1);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+/* Smooth Transition for Opening the Love Letter */
+@keyframes unfoldLetter {
+  0% {
+    transform: scale(0) rotateX(-90deg);
+  }
+  100% {
+    transform: scale(1) rotateX(0deg);
+  }
+}
+
+.love-letter-modal {
+  animation: unfoldLetter 1s ease-in-out forwards;
+}
+
+/* Gallery Hover Effects */
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
