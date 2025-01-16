@@ -17,8 +17,7 @@ export default function LoveLetter() {
           <div className="bg-white p-8 rounded-xl shadow-xl max-w-lg w-full animate__fadeIn">
             <h2 className="text-3xl font-bold text-pink-500">To My Forever Love ❤️</h2>
             <p className="mt-4 text-lg text-gray-800">
-              You are the best thing that has ever happened to me. This gallery
-              is just a small token of my endless love for you. 💕
+              You are the best thing that have ever happened to me. I always be your side no matter what. I can't stop thinking about you even at my lowest I always think how can I bring smile on your face. I started loving your more and more and wanted to be with you forever. you are the bestt. 💕
             </p>
             <button
               className="mt-6 bg-red-500 text-white px-6 py-3 rounded-full shadow-lg hover:bg-red-600 transition-all duration-100"
