@@ -6,7 +6,7 @@ export default function LoveLetter() {
   return (
     <div>
       <button
-        className="fixed bottom-8 right-8 bg-gradient-to-r from-pink-500 to-red-500 text-white px-10 py-5 rounded-full shadow-lg hover:scale-105 transition-all duration-100 text-4xl sm:px-6 sm:py-3 sm:text-xl xs:px-4 xs:py-2 xs:text-lg"
+        className="fixed bottom-8 right-8 bg-gradient-to-r from-pink-500 to-red-500 text-white px-10 py-5 rounded-full shadow-lg hover:scale-105 transition-all duration-100 text-4xl sm:px-6 sm:py-3 sm:text-xl xs:px-4 xs:py-2 xs:text-lg "
         onClick={() => setIsOpen(true)}
       >
         Read this 💌

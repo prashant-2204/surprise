@@ -14,7 +14,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-black text-white overflow-hidden">
+    <div className="min-h-screen min-w-full  overflow-x-hidden bg-black text-white overflow-hidden">
       {/* Hero Section with Dynamic Video or Image Background */}
       <section className="relative flex items-center justify-center h-screen text-center overflow-hidden">
         {/* Conditionally Render Background */}
