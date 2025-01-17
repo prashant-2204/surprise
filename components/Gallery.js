@@ -88,15 +88,16 @@ export default function Gallery() {
   };
 
   return (
-    <div className="p-8 bg-gradient-to-r from-slate-200 to-pink-300 rounded-xl shadow-xl">
+    <div className="p-5 md:p-10 bg-gradient-to-r from-slate-200 to-pink-300 rounded-xl shadow-xl">
       <h2 className="text-4xl font-extrabold text-gray-800 text-center mb-8">
         Our Memory Gallery
       </h2>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+      <div className="columns-1 sm:columns-2  lg:columns-3 gap-5 lg:gap-8 xl:columns-4
+      [&>img:not(:first-child)]:mt-5 lg:[&>img:not(:first-child)]:mt-8">
         {imagesWithSongs.map((item, index) => (
           <div
             key={index}
-            className="relative group overflow-hidden rounded-xl transition-all duration-500"
+            className="relative group lg:mt-8 mt-5 rounded-xl transition-all duration-500 "
             onMouseEnter={() => playSong(item.song)}
             onMouseLeave={stopSong}
             onClick={() => openModal(item.img)}
