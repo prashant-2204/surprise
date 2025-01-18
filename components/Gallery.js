@@ -90,7 +90,7 @@ export default function Gallery() {
   return (
     <div className="p-5 md:p-10 bg-gradient-to-r from-slate-200 to-pink-300 rounded-xl shadow-xl">
       <h2 className="text-4xl font-extrabold text-gray-800 text-center mb-8">
-        Our Own Pinterest 💟 
+        Our Memory Gallery
       </h2>
       <div className="columns-1 sm:columns-2  lg:columns-3 gap-5 lg:gap-8 xl:columns-4
       [&>img:not(:first-child)]:mt-5 lg:[&>img:not(:first-child)]:mt-8">
