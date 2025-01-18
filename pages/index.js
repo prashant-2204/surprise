@@ -61,7 +61,7 @@ export default function Home() {
       </section>
 
       {/* Gallery Section with Soft Hover Effects */}
-      <section className="py-16 px-8 bg-red rounded-xl shadow-xl mx-4 text-center">
+      <section className=" bg-red rounded-xl shadow-xl mx-4 text-center">
         <Gallery />
       </section>
 

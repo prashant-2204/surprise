@@ -1,19 +1,16 @@
 {
   "likes": {
-    "/uploads/images/img2.jpeg": 1,
+    "/uploads/images/img2.jpeg": 2,
     "/uploads/images/img1.png": 1,
     "/uploads/images/IMG-20231204-WA0036.webp": 1,
     "/uploads/images/IMG_3178.JPG": 1
   },
   "comments": {
-    "/uploads/images/img2.jpeg": [
-     
-    ],
-    "/uploads/images/IMG-20231204-WA0036.webp": [
-      
-    ],
-    "/uploads/images/img1.jpg": [
-    
+    "/uploads/images/img2.jpeg": [],
+    "/uploads/images/IMG-20231204-WA0036.webp": [],
+    "/uploads/images/img1.jpg": [],
+    "/uploads/images/IMG_3178.JPG": [
+      "hii"
     ]
   }
 }
